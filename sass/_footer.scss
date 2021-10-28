@@ -1,0 +1,88 @@
+.footer {
+  margin-top: 2rem;
+  background-color: $light-gray-color;
+  &-title {
+    padding-top: 3rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+  &-email {
+    margin-top: 3rem;
+    width: 70%;
+    display: flex;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  &-input-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%), translateY(-50%);
+    border-radius: 0;
+  }
+  &-item-infor {
+    &-tile {
+      font-size: 2.2rem;
+    }
+    margin-top: 3rem;
+    &-link {
+      padding-top: 2rem;
+      display: block;
+      i {
+        color: $green-color;
+      }
+      span {
+        color: $text-color;
+        transition: all 0.2s linear;
+      }
+      &:hover {
+        span {
+          margin-left: 1.5rem;
+          color: $green-color;
+        }
+      }
+    }
+  }
+  &-list-infor {
+    &-show {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+  &-item-infor {
+    width: 27rem;
+
+    &-time {
+      margin-top: 2.1rem;
+    }
+  }
+  &-social {
+    &-list {
+      margin-top: 3rem;
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+    &-item {
+      background-color: $green-color;
+      width: 4.5rem;
+      height: 4.5rem;
+      color: $white-color;
+      font-size: 2rem;
+      margin: 1rem;
+      text-align: center;
+      line-height: 4.5rem;
+      transition: all 0.2s linear;
+      border-radius: 5px;
+      &:hover {
+        background-color: $main-color;
+      }
+    }
+  }
+  //responsive
+  @include maxWidth(767px) {
+    &-email {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.cart {
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $green-color;
+    height: 30rem;
+    border-radius: 10rem;
+    border: 3px solid white;
+  }
+
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: scroll;
+  background-color: $white-color;
+  input {
+    display: inline-block;
+    width: 8rem;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+  }
+
+  &-show {
+    margin-top: 8.5rem;
+    border: 2px solid $text-color;
+    border-radius: 5px;
+    min-height: 50vh;
+  }
+  &-title {
+    line-height: 1;
+    font-size: 3rem;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid $text-color;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+    gap: 1.5rem;
+  }
+
+  &-item {
+    background-color: $light-gray-color;
+
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    &-content {
+      margin-left: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    &-image {
+      height: 8rem;
+      width: auto;
+    }
+    &-quantity {
+      margin-top: 1rem;
+    }
+    &-price {
+      margin-top: 1rem;
+      span {
+        color: $green-color;
+      }
+    }
+    position: relative;
+    &-delete {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: all 0.2s linear;
+      &:hover {
+        color: #d63031;
+      }
+    }
+  }
+  &-list {
+    padding: 1.5rem;
+  }
+}
+.close {
+  display: none;
+}
+.cart-close {
+  font-size: 4rem;
+  color: #d63031;
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
+  cursor: pointer;
+}

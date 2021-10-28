@@ -1,0 +1,30 @@
+.category {
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13.75rem, 1fr));
+    gap: 3rem;
+  }
+  &-item {
+    cursor: pointer;
+    background-color: $light-gray-color;
+    display: inline-block;
+
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.2s linear;
+    .category-item-title {
+      transition: all 0.2s linear;
+    }
+    &:hover {
+      background-color: $green-color;
+      .category-item-title {
+        color: $white-color;
+      }
+    }
+
+    &-image {
+      height: 7rem;
+      width: auto;
+    }
+  }
+}

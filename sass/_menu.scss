@@ -1,0 +1,51 @@
+.menu {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  &-name {
+    font-size: 3rem;
+    text-align: center;
+    font-family: $special-font;
+    color: $green-color;
+    text-transform: capitalize;
+  }
+  &-title {
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  &-image {
+    height: 8rem;
+    margin-right: 1.5rem;
+  }
+  &-item {
+    cursor: pointer;
+    padding: 2rem;
+    background: $light-gray-color;
+    display: flex;
+    align-items: center;
+    transition: all 0.25s linear;
+    &:hover {
+      background: $main-color;
+      .menu-content-name {
+        color: $white-color;
+      }
+    }
+  }
+  &-content {
+    &-name {
+      font-size: 2rem;
+    }
+    &-price {
+      margin-top: 1rem;
+      font-size: 1.8rem;
+      color: $green-color;
+    }
+  }
+  &-list {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 1.5rem;
+  }
+}

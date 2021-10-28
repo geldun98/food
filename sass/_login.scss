@@ -1,0 +1,66 @@
+.login {
+  position: fixed;
+  z-index: 120;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: $light-gray-color;
+  &-form {
+    width: 40rem;
+    min-height: 50vh;
+    background-color: $white-color;
+    margin: 10rem auto;
+    box-shadow: 0 0 10px 0 $text-color;
+    padding: 2rem;
+    &-title {
+      margin-top: 1rem;
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+    input {
+      margin-top: 2rem;
+      background-color: $light-gray-color;
+      &:focus {
+        border: 1px solid blue;
+        box-shadow: 0 0 5px 0 blue;
+      }
+    }
+    input[type^="checkbox"] {
+      display: inline-block;
+      width: auto;
+      &:focus {
+        border: 0;
+        box-shadow: none;
+      }
+    }
+    input[type^="submit"] {
+      margin-top: 3rem;
+      width: 100%;
+      color: $white-color;
+      background-color: $green-color;
+      font-size: 1.8rem;
+      font-family: $normal-font;
+      border: 0;
+      box-shadow: 0 0px 5px 0 $green-color;
+      transition: all 0.2s linear;
+      &:hover {
+        background-color: $main-color;
+        box-shadow: 0 0px 5px 0 $main-color;
+      }
+    }
+  }
+  @include maxWidth(767px) {
+    &-form {
+      width: 100%;
+    }
+  }
+  &-close {
+    font-size: 4rem;
+    color: #d63031;
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+    cursor: pointer;
+  }
+}

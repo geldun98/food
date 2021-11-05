@@ -646,19 +646,67 @@ textarea {
   font-size: 3rem;
 }
 .popular-item {
-  min-width: 26rem;
   background-color: #f7f7f7;
-  display: inline-block;
   position: relative;
 }
 .popular-item-button {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.popular .slick-slide {
+  margin: 0 2rem;
+}
+.popular .slick-list {
+  margin: 0 -2rem;
+  margin-bottom: 1.5rem;
+}
+.popular .slick-arrow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  font-size: 2.5rem;
+  outline: none;
+  border: 0;
+  border-radius: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  transition: all 0.2s linear;
+}
+.popular .slick-arrow:hover {
+  color: white;
+  background-color: #27ae60;
+}
+.popular .slick-prev {
+  left: 0;
+}
+.popular .slick-next {
+  right: 0;
+}
+.popular .slick-dots {
+  position: absolute;
+  display: flex !important;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 1.5rem;
+}
+.popular .slick-dots button {
+  font-size: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  outline: none;
+  border: 0;
+  transition: all 0.2 linear;
+}
+.popular .slick-dots .slick-active button {
+  background-color: #27ae60;
+}
 .popular-item-image {
   margin-top: 2.5rem;
-  height: 15rem;
-  width: auto;
+  height: auto;
+  width: 100%;
   margin-bottom: 1rem;
 }
 .popular-item-love {
@@ -698,12 +746,10 @@ textarea {
 }
 .popular-list {
   margin-top: 4rem;
-  display: flex;
-  gap: 1.5rem;
 }
 .popular-burger {
   text-align: left;
-  margin-top: 5rem;
+  margin-top: 7rem;
   background-image: url(../image/row-banner.png);
   background-position: center;
   background-size: cover;
@@ -775,42 +821,6 @@ textarea {
   position: absolute;
   top: 2rem;
   left: 2rem;
-}
-@media screen and (max-width: 767px) {
-  .popular-item {
-    width: 30rem;
-  }
-}
-@media screen and (max-width: 1023px) {
-  .popular-item {
-    min-width: 22rem;
-  }
-}
-
-.owl-carousel .owl-item img {
-  display: inline-block;
-  width: auto;
-}
-
-.owl-theme .owl-nav {
-  margin-top: 0;
-  position: absolute;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  top: 45%;
-  transform: translateY(-50%);
-  font-size: 7rem;
-}
-
-.owl-carousel .owl-nav button.owl-next:hover {
-  background-color: transparent;
-  color: #27ae60;
-}
-
-.owl-carousel .owl-nav button.owl-prev:hover {
-  background-color: transparent;
-  color: #27ae60;
 }
 
 .menu {

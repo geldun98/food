@@ -66,25 +66,37 @@ closeLogin.addEventListener("click", function () {
 });
 
 //Slider
-$(".owl-carousel").owlCarousel({
-  loop: true,
+
+$(".popular-list").slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  infinite: true,
   autoplay: true,
-  // autoplayTimeout: 1000,
-  responsiveClass: true,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
-      nav: false,
+  autoplaySpeed: 1500,
+  dots: true,
+  prevArrow:
+    "<button type='button' class='slick-prev pull-left slick-arrow'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+  nextArrow:
+    "<button type='button' class='slick-next pull-right slick-arrow'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+  responsive: [
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        dots: true,
+      },
+      breakpoint: 468,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        infinite: false,
+        dots: true,
+      },
     },
-    600: {
-      items: 3,
-      nav: false,
-    },
-    1000: {
-      items: 4,
-      nav: true,
-      loop: true,
-    },
-  },
+  ],
 });

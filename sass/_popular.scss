@@ -13,10 +13,8 @@
     font-size: 3rem;
   }
   &-item {
-    min-width: 26rem;
-
     background-color: $light-gray-color;
-    display: inline-block;
+
     position: relative;
 
     &-button {
@@ -24,10 +22,60 @@
       margin-bottom: 2rem;
     }
   }
+  .slick-slide {
+    margin: 0 2rem;
+  }
+  .slick-list {
+    margin: 0 -2rem;
+    margin-bottom: 1.5rem;
+  }
+  .slick-arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    font-size: 2.5rem;
+    outline: none;
+    border: 0;
+    border-radius: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    transition: all 0.2s linear;
+    &:hover {
+      color: white;
+      background-color: $green-color;
+    }
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-dots {
+    position: absolute;
+    display: flex !important;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 1.5rem;
+  }
+  .slick-dots button {
+    font-size: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    outline: none;
+    border: 0;
+    transition: all 0.2 linear;
+  }
+  .slick-dots .slick-active button {
+    background-color: $green-color;
+  }
   &-item-image {
     margin-top: 2.5rem;
-    height: 15rem;
-    width: auto;
+    height: auto;
+    width: 100%;
 
     margin-bottom: 1rem;
   }
@@ -70,13 +118,11 @@
   }
   &-list {
     margin-top: 4rem;
-    display: flex;
-    gap: 1.5rem;
   }
 
   &-burger {
     text-align: left;
-    margin-top: 5rem;
+    margin-top: 7rem;
     background-image: url(../image/row-banner.png);
     background-position: center;
     background-size: cover;
@@ -154,39 +200,6 @@
       left: 2rem;
     }
   }
-  @include maxWidth(767px) {
-    &-item {
-      width: 30rem;
-    }
-  }
-  @include maxWidth(1023px) {
-    &-item {
-      min-width: 22rem;
-    }
-  }
 }
 
 //slider
-.owl-carousel .owl-item img {
-  display: inline-block;
-  width: auto;
-}
-.owl-theme .owl-nav {
-  margin-top: 0;
-
-  position: absolute;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  top: 45%;
-  transform: translateY(-50%);
-  font-size: 7rem;
-}
-.owl-carousel .owl-nav button.owl-next:hover {
-  background-color: transparent;
-  color: $green-color;
-}
-.owl-carousel .owl-nav button.owl-prev:hover {
-  background-color: transparent;
-  color: $green-color;
-}

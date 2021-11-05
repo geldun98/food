@@ -822,6 +822,14 @@ textarea {
   top: 2rem;
   left: 2rem;
 }
+@media screen and (max-width: 486px) {
+  .popular .slick-slide {
+    margin: 0;
+  }
+  .popular .slick-list {
+    margin: 0;
+  }
+}
 
 .menu {
   padding-top: 2rem;

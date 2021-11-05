@@ -200,6 +200,12 @@
       left: 2rem;
     }
   }
+  @include maxWidth(486px) {
+    .slick-slide {
+      margin: 0;
+    }
+    .slick-list {
+      margin: 0;
+    }
+  }
 }
-
-//slider

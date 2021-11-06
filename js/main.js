@@ -1,3 +1,9 @@
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    document.querySelector(".preloader").classList.add("load-done");
+  }, 1000);
+});
+
 const modal = document.querySelector(".check-modal");
 const menu = document.querySelector("#menu-btn");
 const headerMenu = document.querySelector(".header-menu");
